@@ -54,7 +54,7 @@ add_action( 'admin_init', 'infinite_scroll_for_admin_text_domain' );
 function infinite_scroll_for_admin_scripts( $hook ) {
 
 
-    if ( in_array( $hook, array( 'edit.php', 'edit-tags.php', 'edit-comments.php' ) ) ) {
+    if ( in_array( $hook, array( 'edit.php', 'edit-tags.php', 'edit-comments.php', 'users.php', 'upload.php' ) ) ) {
 
         $min = ( defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ) ? '' : '.min';
 
