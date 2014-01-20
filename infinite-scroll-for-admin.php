@@ -90,28 +90,28 @@ function infinite_scroll_for_admin_init_scripts(){ ?>
     (function ($) {
 
         // little conditional so we can re-use script on both edit.php and edit-comments.php
-        if ( $('#the-list').length ){
-            var scrollme = '#the-list';
-        } else if ( $('#the-comment-list').length ) {
-            scrollme = '#the-comment-list';
+        if ( $('#the-comment-list').length ) {
+            list = '#the-comment-list';
+        } else {
+            var list = '#the-list';
         }
 
-        var colspan = $( scrollme + ' tr:first-child').find('td').length;
-        var contentSelector = scrollme;
-        var itemSelector = scrollme + ' > tr';
+        var colspan = $( list + ' tr:first-child').find('td').length;
+        var contentSelector = list;
+        var itemSelector = list + ' > tr';
 
-       $(scrollme).infinitescroll({
+       $(list).infinitescroll({
             loading: {
                 finishedMsg: '<em>' + Infinite_Scroll_Admin.finishedMsg + '</em>',
                 msg: $('<tr id="infscr-loading"><td colspan="' + colspan + '"><img alt="Loading..." src="' + "<?php echo admin_url( 'images/wpspin_light.gif' ); ?>" + '" /><div>' + Infinite_Scroll_Admin.msgText + '</div></td></tr>')
             },
-            nextSelector: ".pagination-links a.next-page",
-            navSelector: ".pagination-links",
+            nextSelector: '.pagination-links a.next-page',
+            navSelector: '.pagination-links',
             contentSelector: contentSelector,
             itemSelector: itemSelector,
             prefill: true,
             maxPage: $('.paging-input .total-pages').html(),
-            debug: true
+            debug: false
         });
 
     })(jQuery)
