@@ -3,7 +3,7 @@
 Plugin Name: Infinite Scroll for Admin
 Plugin URI: https://github.com/helgatheviking/Infinite-Scroll-for-Admin
 Description: Use infinite scroll in the WordPress backend
-Version: 1.0
+Version: 1.0.1
 Author: Kathy Darling
 Author URI: http://www.kathyisawesome.com
 License: GPL2
