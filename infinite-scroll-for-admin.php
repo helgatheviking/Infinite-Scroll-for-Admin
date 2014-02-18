@@ -41,7 +41,7 @@ if ( ! function_exists( 'is_admin' ) ) {
  */
 function infinite_scroll_for_admin_text_domain() {
     load_plugin_textdomain( 'infinite-scroll-for-admin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-    }
+}
 add_action( 'admin_init', 'infinite_scroll_for_admin_text_domain' );
 
 /**
